@@ -3,6 +3,5 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="XamRobot.App">
     <Application.Resources>
-
     </Application.Resources>
 </Application>

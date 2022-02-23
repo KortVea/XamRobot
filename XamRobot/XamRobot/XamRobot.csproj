@@ -10,6 +10,19 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012"/>
+        <PackageReference Include="ReactiveUI.XamForms" Version="17.1.50" />
+        <PackageReference Include="Sextant.XamForms" Version="2.12.4" />
+        <PackageReference Include="Xamarin.Forms" Version="5.0.0.2337" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\XR.ViewModels\XR.ViewModels.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Update="Views\MainView.xaml.cs">
+        <DependentUpon>MainView.xaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
     </ItemGroup>
 </Project>
