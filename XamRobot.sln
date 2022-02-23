@@ -8,6 +8,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamRobot.iOS", "XamRobot\Xa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XR.ViewModels", "XR.ViewModels\XR.ViewModels.csproj", "{5F7AAF49-F533-4AAB-9B39-B24D741664C3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XR.Service", "XR.Service\XR.Service.csproj", "{4211DEE6-744F-4B66-810E-099339F58893}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Ad-Hoc|iPhone = Ad-Hoc|iPhone
@@ -100,5 +102,21 @@ Global
 		{5F7AAF49-F533-4AAB-9B39-B24D741664C3}.Release|iPhone.Build.0 = Release|Any CPU
 		{5F7AAF49-F533-4AAB-9B39-B24D741664C3}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
 		{5F7AAF49-F533-4AAB-9B39-B24D741664C3}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{4211DEE6-744F-4B66-810E-099339F58893}.Ad-Hoc|iPhone.ActiveCfg = Debug|Any CPU
+		{4211DEE6-744F-4B66-810E-099339F58893}.Ad-Hoc|iPhone.Build.0 = Debug|Any CPU
+		{4211DEE6-744F-4B66-810E-099339F58893}.AppStore|iPhone.ActiveCfg = Debug|Any CPU
+		{4211DEE6-744F-4B66-810E-099339F58893}.AppStore|iPhone.Build.0 = Debug|Any CPU
+		{4211DEE6-744F-4B66-810E-099339F58893}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4211DEE6-744F-4B66-810E-099339F58893}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4211DEE6-744F-4B66-810E-099339F58893}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{4211DEE6-744F-4B66-810E-099339F58893}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{4211DEE6-744F-4B66-810E-099339F58893}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{4211DEE6-744F-4B66-810E-099339F58893}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{4211DEE6-744F-4B66-810E-099339F58893}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4211DEE6-744F-4B66-810E-099339F58893}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4211DEE6-744F-4B66-810E-099339F58893}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{4211DEE6-744F-4B66-810E-099339F58893}.Release|iPhone.Build.0 = Release|Any CPU
+		{4211DEE6-744F-4B66-810E-099339F58893}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{4211DEE6-744F-4B66-810E-099339F58893}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

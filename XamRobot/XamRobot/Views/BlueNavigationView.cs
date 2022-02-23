@@ -10,8 +10,9 @@ namespace XamRobot.Views
         public BlueNavigationView()
             : base(RxApp.MainThreadScheduler, RxApp.TaskpoolScheduler, ViewLocator.Current)
         {
-            BarBackgroundColor = Color.Blue;
+            BarBackgroundColor = Color.LightSeaGreen;
             BarTextColor = Color.White;
+            Title = "Robot Game";
         }
 
         public object ViewModel { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }

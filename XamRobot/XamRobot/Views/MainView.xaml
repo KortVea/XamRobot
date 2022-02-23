@@ -8,10 +8,33 @@
                           x:Class="XamRobot.Views.MainView">
 
     <Grid RowDefinitions="Auto,Auto,*"
-          ColumnDefinitions="2*, 1*">
-        <ListView>
-            
+          ColumnDefinitions="2*, 1*"
+          BackgroundColor="Beige"
+          Margin="6">
+        
+        <Grid Grid.Row="0"
+              Grid.Column="0"
+              HorizontalOptions="CenterAndExpand"
+              VerticalOptions="CenterAndExpand"
+              x:Name="map"
+              Padding="12"
+              RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto"
+              ColumnDefinitions="Auto,Auto,Auto,Auto,Auto,Auto"/>
+        
+        <ListView Grid.Row="0"
+                  Grid.Column="1"
+                  x:Name="records"
+                  Margin="4"
+                  BackgroundColor="Aquamarine"
+                  HeightRequest="480"
+                  WidthRequest="320" >
         </ListView>
+        
+        <Entry Grid.Row="1"
+               Grid.ColumnSpan="2"
+               x:Name="command"
+               HeightRequest="48"
+               Placeholder="Waiting for command..." />
         
     </Grid>
 

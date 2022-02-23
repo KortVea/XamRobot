@@ -10,6 +10,10 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="ReactiveMarbles.ObservableEvents.SourceGenerator" Version="1.1.4">
+          <PrivateAssets>all</PrivateAssets>
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
         <PackageReference Include="ReactiveUI.XamForms" Version="17.1.50" />
         <PackageReference Include="Sextant.XamForms" Version="2.12.4" />
         <PackageReference Include="Xamarin.Forms" Version="5.0.0.2337" />

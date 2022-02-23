@@ -13,21 +13,14 @@ namespace XamRobot
 {
     public partial class App
     {
-        public App()
+        public App(MainViewModel mainViewModel)
         {
             InitializeComponent();
-
-            RxApp.DefaultExceptionHandler = new SextantDefaultExceptionHandler();
-            Sextant.Sextant.Instance.InitializeForms();
-            Locator
-                .CurrentMutable
-                .RegisterView<MainView, MainViewModel>()
-                .RegisterNavigationView(() => new BlueNavigationView());
-
+            
             Locator
                 .Current
                 .GetService<IViewStackService>()
-                .PushPage(new MainViewModel(Locator.Current.GetService<IViewStackService>()), null, true, false)
+                .PushPage(mainViewModel, null, true, false)
                 .Subscribe();
 
             MainPage = Locator.Current.GetNavigationView();
