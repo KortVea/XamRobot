@@ -1,5 +1,7 @@
 using System;
 using System.Linq;
+using System.Reactive.Linq;
+using System.Reactive.Subjects;
 
 namespace XR.Service
 {
@@ -53,10 +55,13 @@ namespace XR.Service
             }
         }
 
+        private ReplaySubject<Position> position = new ReplaySubject<Position>(1);
 
-        public ExecResult Execute(string? command)
+        public IObservable<Position> Location => this.position.AsObservable();
+
+        public ExecResult Execute(string command)
         {
-            var info = command?.Split(' ', 2, StringSplitOptions.RemoveEmptyEntries);
+            var info = command?.Split(new char[]{' '}, 2, StringSplitOptions.RemoveEmptyEntries);
             
             if (info == null || info.Length == 0)
                 return ExecResult.ERROR;
@@ -72,7 +77,7 @@ namespace XR.Service
                 {
                     var actionArgs = 
                         info[1]
-                            .Split(',', StringSplitOptions.RemoveEmptyEntries)
+                            .Split(new char[]{','}, StringSplitOptions.RemoveEmptyEntries)
                             .Select(i => i.Trim())
                             .ToArray();
                 
@@ -110,6 +115,8 @@ namespace XR.Service
             this.X = x;
             this.Y = y;
             this.Direction = bearing;
+            
+            this.position.OnNext(new Position(this.X, this.Y, this.Direction));
             return ExecResult.OK;
 
         }
@@ -136,6 +143,7 @@ namespace XR.Service
                 default:
                     throw new ArgumentOutOfRangeException();
             }
+            this.position.OnNext(new Position(this.X, this.Y, this.Direction));
             return ExecResult.OK;
         }
 
@@ -161,6 +169,7 @@ namespace XR.Service
                 default:
                     throw new ArgumentOutOfRangeException();
             }
+            this.position.OnNext(new Position(this.X, this.Y, this.Direction));
             return ExecResult.OK;
         }
 
@@ -185,6 +194,7 @@ namespace XR.Service
                 default:
                     throw new ArgumentOutOfRangeException();
             }
+            this.position.OnNext(new Position(this.X, this.Y, this.Direction));
             return ExecResult.OK;
         }
 
@@ -195,7 +205,7 @@ namespace XR.Service
             return string.IsNullOrEmpty(report) ? ExecResult.DENIED : ExecResult.OK;
         }
 
-        public override string? ToString() =>
+        public override string ToString() =>
             this.IsValidState
                 ? $"{this._x},{this._y},{this._direction.ToString()}"
                 : null;

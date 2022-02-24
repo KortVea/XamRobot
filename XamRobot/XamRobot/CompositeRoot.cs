@@ -4,6 +4,7 @@ using Sextant;
 using Sextant.XamForms;
 using Splat;
 using XamRobot.Views;
+using XR.Service;
 using XR.ViewModels;
 
 namespace XamRobot
@@ -11,15 +12,20 @@ namespace XamRobot
     public class CompositeRoot
     {
         private readonly Lazy<MainViewModel> mainViewModel;
+        private readonly Lazy<IRobotGame> robotGame;
 
-        public CompositeRoot()
+        protected CompositeRoot()
         {
-            this.mainViewModel = new Lazy<MainViewModel>(CreateMainViewModel);
             ResolveSextant();
+            this.mainViewModel = new Lazy<MainViewModel>(this.CreateMainViewModel);
+            this.robotGame = new Lazy<IRobotGame>(this.CreateRobotGame);
         }
 
-        public MainViewModel CreateMainViewModel() =>
-            new MainViewModel();
+        private MainViewModel CreateMainViewModel() =>
+            new MainViewModel(this.robotGame.Value);
+
+        private IRobotGame CreateRobotGame() =>
+            new RobotGame();
         
         public App CreateApp() =>
             new App(this.mainViewModel.Value);

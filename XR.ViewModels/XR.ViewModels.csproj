@@ -5,7 +5,12 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="DynamicData" Version="7.5.4" />
         <PackageReference Include="Sextant" Version="2.12.4" />
         <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\XR.Service\XR.Service.csproj" />
     </ItemGroup>
 </Project>

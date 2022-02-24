@@ -5,7 +5,8 @@
                           x:TypeArguments="viewModels:MainViewModel"
                           xmlns:local="clr-namespace:XamRobot"
                           xmlns:viewModels="clr-namespace:XR.ViewModels;assembly=XR.ViewModels"
-                          x:Class="XamRobot.Views.MainView">
+                          x:Class="XamRobot.Views.MainView"
+                          Title="Robot Game">
 
     <Grid RowDefinitions="Auto,Auto,*"
           ColumnDefinitions="2*, 1*"
@@ -27,8 +28,7 @@
                   Margin="4"
                   BackgroundColor="Aquamarine"
                   HeightRequest="480"
-                  WidthRequest="320" >
-        </ListView>
+                  WidthRequest="320" />
         
         <Entry Grid.Row="1"
                Grid.ColumnSpan="2"
