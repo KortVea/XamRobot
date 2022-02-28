@@ -8,4 +8,5 @@ This achieves declarative FP style, which equates good and robust.
 - Add XUnit
 - Add Refit rest api
 - Add Xamarin.Plugin.SharedTransitions
+- Shiny v2
 
