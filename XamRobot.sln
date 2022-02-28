@@ -1,5 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamRobot", "XamRobot\XamRobot\XamRobot.csproj", "{BFE7C0D2-0D43-41D1-AB5A-753C67389A5D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamRobot.Droid", "XamRobot\XamRobot.Droid\XamRobot.Droid.csproj", "{01139A30-5147-4AAF-88F2-114A3E775131}"
@@ -9,6 +10,13 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XR.ViewModels", "XR.ViewModels\XR.ViewModels.csproj", "{5F7AAF49-F533-4AAB-9B39-B24D741664C3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XR.Service", "XR.Service\XR.Service.csproj", "{4211DEE6-744F-4B66-810E-099339F58893}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{273549DF-D88C-4E0F-8C5B-64F9F6448982}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{8BD40A8E-BAD8-4ECF-A40E-0C67A41FC51A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -118,5 +126,12 @@ Global
 		{4211DEE6-744F-4B66-810E-099339F58893}.Release|iPhone.Build.0 = Release|Any CPU
 		{4211DEE6-744F-4B66-810E-099339F58893}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
 		{4211DEE6-744F-4B66-810E-099339F58893}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BFE7C0D2-0D43-41D1-AB5A-753C67389A5D} = {8BD40A8E-BAD8-4ECF-A40E-0C67A41FC51A}
+		{01139A30-5147-4AAF-88F2-114A3E775131} = {8BD40A8E-BAD8-4ECF-A40E-0C67A41FC51A}
+		{133A9775-C73C-47BA-B3E2-D78E7B521B71} = {8BD40A8E-BAD8-4ECF-A40E-0C67A41FC51A}
+		{4211DEE6-744F-4B66-810E-099339F58893} = {8BD40A8E-BAD8-4ECF-A40E-0C67A41FC51A}
+		{5F7AAF49-F533-4AAB-9B39-B24D741664C3} = {8BD40A8E-BAD8-4ECF-A40E-0C67A41FC51A}
 	EndGlobalSection
 EndGlobal

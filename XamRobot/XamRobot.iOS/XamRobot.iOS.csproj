@@ -111,7 +111,7 @@
     </ItemGroup>
     <ItemGroup>
         <ProjectReference Include="..\XamRobot\XamRobot.csproj">
-            <Project>{91DAC2F3-D726-4042-953E-B9F98946CA87}</Project>
+            <Project>{BFE7C0D2-0D43-41D1-AB5A-753C67389A5D}</Project>
             <Name>XamRobot</Name>
         </ProjectReference>
     </ItemGroup>
