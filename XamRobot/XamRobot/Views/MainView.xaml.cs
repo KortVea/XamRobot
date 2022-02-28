@@ -44,6 +44,14 @@ namespace XamRobot.Views
                         v => v.records.ItemsSource)
                     .DisposeWith(d);
 
+                this.records
+                    .Events()
+                    .ItemSelected
+                    .Select(e => e.SelectedItem)
+                    .Cast<string>()
+                    .Subscribe(s => this.command.Text = s)
+                    .DisposeWith(d);
+
                 this
                     .ViewModel
                     .Location

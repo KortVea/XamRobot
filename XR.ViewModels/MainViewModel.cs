@@ -20,7 +20,7 @@ namespace XR.ViewModels
 
         public IObservable<Position> Location { get; }
 
-        private readonly SourceList<string> commandRecordSource = new SourceList<string>();
+        private readonly SourceCache<string, Guid> commandRecordSource = new SourceCache<string, Guid>(_ => Guid.NewGuid());
         
         public readonly ReadOnlyObservableCollection<string> CommandRecords;
         
@@ -31,8 +31,13 @@ namespace XR.ViewModels
                 .Create<string, ExecResult>(robotGame.Execute);
 
             this.ProcessRecords = ReactiveCommand
-                .Create<string>(cmd => this.commandRecordSource.Add(cmd));
+                .Create<string>(cmd => this.commandRecordSource.AddOrUpdate(cmd));
 
+            this
+                .commandRecordSource
+                .ExpireAfter(_ => TimeSpan.FromSeconds(10), TimeSpan.FromSeconds(1))
+                .Subscribe();
+            
             this
                 .commandRecordSource
                 .Connect()
