@@ -1,0 +1,28 @@
+﻿<Properties StartupConfiguration="{01139A30-5147-4AAF-88F2-114A3E775131}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="XamRobot/XamRobot.iOS/Main.cs">
+    <Files>
+      <File FileName="XamRobot/XamRobot.iOS/Main.cs" Line="18" Column="6" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="XamRobot" expanded="True">
+            <Node name="Solution Items" expanded="True" />
+            <Node name="src" expanded="True">
+              <Node name="XamRobot.iOS" expanded="True">
+                <Node name="Main.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.src.XamRobot.Droid PreferredExecutionTarget="Android.Pixel_3a_API_32_arm64-v8a" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
