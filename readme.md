@@ -2,11 +2,12 @@
 
 This achieves declarative FP style, which equates good and robust.
 
-## ToDo
-- Add Logging
-- Add Analytics
+## Todo
+- Inject schedulers
+- Add Logging / shiny log ?
+- Add Analytics / shiny analytics ? 
 - Add XUnit
-- Add Refit rest api
+- Add Refit rest api w/ Rx and Polly context - paired with FastEndpoints
 - Add Xamarin.Plugin.SharedTransitions
 - Shiny v2
 
