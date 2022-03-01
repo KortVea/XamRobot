@@ -111,14 +111,14 @@ namespace XR.Service
         {
             if (!HasBearing && bearing == null)
                 return ExecResult.DENIED;
-            
+            if (!IsValidCoordinate(x) || !IsValidCoordinate(y))
+                return ExecResult.DENIED;
             this.X = x;
             this.Y = y;
             this.Direction = bearing;
             
             this.position.OnNext(new Position(this.X, this.Y, this.Direction));
             return ExecResult.OK;
-
         }
 
         public ExecResult LEFT()
@@ -201,7 +201,7 @@ namespace XR.Service
         public ExecResult REPORT()
         {
             var report = this.ToString();
-            Console.WriteLine(this.ToString());
+            Console.WriteLine(report);
             return string.IsNullOrEmpty(report) ? ExecResult.DENIED : ExecResult.OK;
         }
 
